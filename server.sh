@@ -5,4 +5,6 @@ mlflow server \
   --host 0.0.0.0 \
   --port 8080 \
   --backend-store-uri $POSTGRESQL_URL \
-  --artifacts-destination $STORAGE_URL
+  --artifacts-destination $STORAGE_URL \
+  --MLFLOW_TRACKING_USERNAME=$MLFLOW_USERNAME \
+  --MLFLOW_TRACKING_PASSWORD=$MLFLOW_PASSWORD

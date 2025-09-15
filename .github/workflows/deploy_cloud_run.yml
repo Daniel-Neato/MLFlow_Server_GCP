@@ -50,6 +50,8 @@ jobs:
           --update-secrets=/secrets/credentials=access_keys:latest \
           --update-secrets=POSTGRESQL_URL=mlflow_database_url:latest \
           --update-secrets=STORAGE_URL=mlflow_artifact_url:latest \
+          --update-secrets=MLFLOW_USERNAME=mlflow_tracking_username \
+          --update-secrets=MLFLOW_PASSWORD=mlflow_tracking_password \
           --memory 2Gi \
           --port 8080 \
           --network=default \
