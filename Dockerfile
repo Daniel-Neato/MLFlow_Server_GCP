@@ -8,8 +8,7 @@ COPY server.sh server.sh
 
 ENV GOOGLE_APPLICATION_CREDENTIALS='./secrets/credentials'
 
-RUN pip install uv
-RUN uv pip install --upgrade pip && uv pip install -r requirements.txt
+RUN pip install --upgrade pip && pip install -r requirements.txt
 
 EXPOSE 8080
 
