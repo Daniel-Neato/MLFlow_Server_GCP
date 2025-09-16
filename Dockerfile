@@ -17,4 +17,4 @@ RUN apt-get update && apt-get install -y --no-install-recommends bash \
  && sed -i 's/\r$//' /entry-point.sh \
  && chmod +x /entry-point.sh
 
-ENTRYPOINT ["./server.sh"]
+ENTRYPOINT ["./entry-point.sh"]
