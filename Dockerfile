@@ -1,6 +1,5 @@
 FROM python:3.11-slim
 
-
 WORKDIR /
 
 COPY requirements.txt requirements.txt 
@@ -16,6 +15,6 @@ EXPOSE 8080
 RUN apt-get update && apt-get install -y --no-install-recommends bash \
  && rm -rf /var/lib/apt/lists/* \
  && sed -i 's/\r$//' /server.sh \
- && chmod +x /server.sh
+ && chmod +x /entry-point.sh
 
 ENTRYPOINT ["./server.sh"]
