@@ -4,6 +4,7 @@ WORKDIR /
 
 COPY requirements.txt requirements.txt 
 COPY entry-point.sh entry-point.sh
+COPY mlflow_auth.py mlflow_auth.py
 
 ENV GOOGLE_APPLICATION_CREDENTIALS='./secrets/credentials'
 
