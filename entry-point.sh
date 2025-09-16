@@ -2,11 +2,11 @@
 
 set -e
 
-# Verify that all required variables are set
-if [[ -z "${GCP_PROJECT}" ]]; then
-    echo "Error: GCP_PROJECT not set"
-    exit 1
-fi
+# # Verify that all required variables are set
+# if [[ -z "${GCP_PROJECT}" ]]; then
+#     echo "Error: GCP_PROJECT not set"
+#     exit 1
+# fi
 
 # Fetch secrets from Secret Manager in CGP
 export MLFLOW_TRACKING_USERNAME=$MLFLOW_USERNAME
