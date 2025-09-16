@@ -14,7 +14,7 @@ EXPOSE 8080
 # Install bash, fix CRLF, make executable
 RUN apt-get update && apt-get install -y --no-install-recommends bash \
  && rm -rf /var/lib/apt/lists/* \
- && sed -i 's/\r$//' /server.sh \
+ && sed -i 's/\r$//' /entry-point.sh \
  && chmod +x /entry-point.sh
 
 ENTRYPOINT ["./server.sh"]
