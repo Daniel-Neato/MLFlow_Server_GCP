@@ -3,7 +3,7 @@ FROM python:3.11-slim
 WORKDIR /
 
 COPY requirements.txt requirements.txt 
-COPY server.sh server.sh
+COPY entry-point.sh entry-point.sh
 
 ENV GOOGLE_APPLICATION_CREDENTIALS='./secrets/credentials'
 
