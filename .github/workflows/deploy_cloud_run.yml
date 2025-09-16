@@ -57,5 +57,5 @@ jobs:
           --network=default \
           --subnet=default \
           --vpc-egress=private-ranges-only 
-#          --allow-unauthenticated 
+          --allow-unauthenticated 
 #adding a comment so the push works
