@@ -46,8 +46,10 @@ if [[ -z "${HOST}" ]]; then
 fi
 
 export WSGI_AUTH_CREDENTIALS="${MLFLOW_TRACKING_USERNAME}:${MLFLOW_TRACKING_PASSWORD}"
-export _MLFLOW_SERVER_ARTIFACT_ROOT="${ARTIFACT_URL}"
+export _MLFLOW_SERVER_ARTIFACT_DESTINATION="${ARTIFACT_URL}"
 export _MLFLOW_SERVER_FILE_STORE="${DATABASE_URL}"
+export _MLFLOW_SERVER_SERVE_ARTIFACTS="true"
+export MLFLOW_ENABLE_PROXY_MULTIPART_UPLOAD="true"
 
 # Start MLflow and ngingx using supervisor
 exec gunicorn -b "${HOST}:${PORT}" -w 4 --log-level debug --access-logfile=- --error-logfile=- --log-level=debug mlflow_auth:app
